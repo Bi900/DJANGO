@@ -1,0 +1,617 @@
+<html>
+<head>
+<script> 
+        var mins = 15; 
+        var secs = mins * 60;
+        function countDown() { 
+            setTimeout('decrement()', 60); 
+        } 
+        function decrement() { 
+            if (document.getElementById) { 
+                minutes = document.getElementById("minutes"); 
+                seconds = document.getElementById("seconds"); 
+                if (seconds < 59) { 
+                    seconds.value = secs; 
+                } 
+                else { 
+                    minutes.value = getMinutes(); 
+                    seconds.value = getSeconds(); 
+                } 
+                if (mins < 0) { 
+                    alert('time up'); 
+                    minutes.value = 0; 
+                    seconds.value = 0; 
+                } 
+                else { 
+                    secs--; 
+                    setTimeout('decrement()', 1000);
+                } 
+            } 
+        } 
+  
+        function getMinutes() { 
+            mins = Math.floor(secs / 60); 
+            return mins; 
+        } 
+  
+        function getSeconds() { 
+            return secs - Math.round(mins * 60); 
+        }
+</script> 
+<title>Quiz Questions And Answers</title>
+<style type="text/css">
+button{width:100px;font-family:Times New Roman;font-size:20px;}
+</style>
+</head>
+<body bgcolor="DarkSeaGreen" text="DarkSlateGrey" onload="countDown();">
+<center><h1>Analogy Test</h1></center>
+<center><h5>Time = 15 mins</h5></center>
+<div id="q1">
+<b>Question1.Cup:Lip::Bird:?</b><br>
+<div id="a1">
+<input type="radio" name="b0" value="Bush" id="option-1">A.Bush
+<span id="result-1"></span>
+</div>
+<div id="a2">
+<input type="radio" name="b0" value="Grass" id="option-2">B.Grass
+<span id="result-2"></span>
+</div>
+<div="a3">
+<input type="radio" name="b0" value="Forest" id="option-3">C.Forest
+<span id="result-3"></span>
+</div>
+<div="a4">
+<input type="radio" name="b0" value="Beak" id="option-4">D.Beak
+<span id="result-4"></span>
+</div><br>
+<button type="button" onclick="displayAnswer1()">Submit</button>
+<a id="showAnswer1"></a>
+</div>
+</div>
+<script>
+function displayAnswer1() 
+{
+if (document.getElementById("option-1").checked) 
+{
+document.getElementById("result-1").innerHTML = 'Incorrect!';
+showCorrectAnswer1();
+}
+if (document.getElementById("option-2").checked)
+{
+document.getElementById("result-2").innerHTML = 'Incorrect!';
+showCorrectAnswer1();
+}
+if (document.getElementById("option-3").checked)
+{
+document.getElementById("result-3").innerHTML = 'Incorrect!';
+showCorrectAnswer1();
+}
+if (document.getElementById("option-4").checked)
+{
+document.getElementById("result-4").innerHTML = 'Correct!';
+showCorrectAnswer1();
+}
+}
+function showCorrectAnswer1() 
+{
+let answer1 = document.createElement("x");
+answer1.innerHTML = 'Correct Answer D';
+document.getElementById("showAnswer1").appendChild(answer1);
+}
+</script><br><br>
+<div id="q2">
+<b>Question2.Flow:River::Stagnant:?</b>
+<div id="a5">
+<input type="radio" name="b1" value="Rain" id="option-5">A.Rain
+<span id="result-5"></span>
+</div>
+<div id="a6">
+<input type="radio" name="b1" value="Stream" id="option-6">B.Stream
+<span id="result-6"></span>
+</div>
+<div="a7">
+<input type="radio" name="b1" value="Pool" id="option-7">C.Pool
+<span id="result-7"></span>
+</div>
+<div="a8">
+<input type="radio" name="b1" value="Canal" id="option-8">D.Canal
+<span id="result-8"></span>
+</div><br>
+<button type="button" onclick="displayAnswer2()">Submit</button>
+<a id="showAnswer2"></a>
+</div>
+</div>
+<script>
+function displayAnswer2() 
+{
+if (document.getElementById("option-5").checked) 
+{
+document.getElementById("result-5").innerHTML = 'Incorrect!';
+showCorrectAnswer2();
+}
+if (document.getElementById("option-6").checked)
+{
+document.getElementById("result-6").innerHTML = 'Incorrect!';
+showCorrectAnswer2();
+}
+if (document.getElementById("option-7").checked)
+{
+document.getElementById("result-7").innerHTML = 'Correct!';
+showCorrectAnswer2();
+}
+if (document.getElementById("option-8").checked)
+{
+document.getElementById("result-8").innerHTML = 'Incorrect!';
+showCorrectAnswer2();
+}
+}
+function showCorrectAnswer2() 
+{
+let answer2 = document.createElement("x");
+answer2.innerHTML = 'Correct Answer C';
+document.getElementById("showAnswer2").appendChild(answer2);
+}
+</script><br><br>
+<div id="q3">
+<b>Question3.Paw:Cat::Hoof:?</b>
+<div id="a9">
+<input type="radio" name="b2" value="Lamb" id="option-9">A.Lamb
+<span id="result-9"></span>
+</div>
+<div id="a10">
+<input type="radio" name="b2" value="Elephant" id="option-10">B.Elephant
+<span id="result-10"></span>
+</div>
+<div="a11">
+<input type="radio" name="b2" value="Lion" id="option-11">C.Lion
+<span id="result-11"></span>
+</div>
+<div="a12">
+<input type="radio" name="b2" value="Horse" id="option-12">D.Horse
+<span id="result-12"></span>
+</div><br>
+<button type="button" onclick="displayAnswer3()">Submit</button>
+<a id="showAnswer3"></a>
+</div>
+</div>
+<script>
+function displayAnswer3() 
+{
+if (document.getElementById("option-9").checked) 
+{
+document.getElementById("result-9").innerHTML = 'Incorrect!';
+showCorrectAnswer3();
+}
+if (document.getElementById("option-10").checked)
+{
+document.getElementById("result-10").innerHTML = 'Incorrect!';
+showCorrectAnswer3();
+}
+if (document.getElementById("option-11").checked)
+{
+document.getElementById("result-11").innerHTML = 'Incorrect!';
+showCorrectAnswer3();
+}
+if (document.getElementById("option-12").checked)
+{
+document.getElementById("result-12").innerHTML = 'Correct!';
+showCorrectAnswer3();
+}
+}
+function showCorrectAnswer3() 
+{
+let answer3 = document.createElement("x");
+answer3.innerHTML = 'Correct Answer D';
+document.getElementById("showAnswer3").appendChild(answer3);
+}
+</script><br><br>
+<div id="q4">
+<b>Question4.Ornithologist:Bird::Archaeologist:?</b>
+<div id="a13">
+<input type="radio" name="b3" value="Islands" id="option-13">A.Islands
+<span id="result-13"></span>
+</div>
+<div id="a14">
+<input type="radio" name="b3" value="Mediators" id="option-14">B.Mediators
+<span id="result-14"></span>
+</div>
+<div="a15">
+<input type="radio" name="b3" value="Archaeology" id="option-15">C.Archaeology
+<span id="result-15"></span>
+</div>
+<div="a16">
+<input type="radio" name="b3" value="Aquatic" id="option-16">D.Aquatic
+<span id="result-16"></span>
+</div><br>
+<button type="button" onclick="displayAnswer4()">Submit</button>
+<a id="showAnswer4"></a>
+</div>
+</div>
+<script>
+function displayAnswer4() 
+{
+if (document.getElementById("option-13").checked) 
+{
+document.getElementById("result-13").innerHTML = 'Incorrect!';
+showCorrectAnswer4();
+}
+if (document.getElementById("option-14").checked)
+{
+document.getElementById("result-14").innerHTML = 'Incorrect!';
+showCorrectAnswer4();
+}
+if (document.getElementById("option-15").checked)
+{
+document.getElementById("result-15").innerHTML = 'Correct!';
+showCorrectAnswer4();
+}
+if (document.getElementById("option-16").checked)
+{
+document.getElementById("result-16").innerHTML = 'Incorrect!';
+showCorrectAnswer4();
+}
+}
+function showCorrectAnswer4() 
+{
+let answer4 = document.createElement("x");
+answer4.innerHTML = 'Correct Answer C';
+document.getElementById("showAnswer4").appendChild(answer4);
+}
+</script><br><br>
+<div id="q5">
+<b>Question5.Peacock:India::Bear:?</b>
+<div id="a17">
+<input type="radio" name="b4" value="Australia" id="option-17">A.Australia
+<span id="result-17"></span>
+</div>
+<div id="a18">
+<input type="radio" name="b4" value="America" id="option-18">B.America
+<span id="result-18"></span>
+</div>
+<div="a19">
+<input type="radio" name="b4" value="Russia" id="option-19">C.Russia
+<span id="result-19"></span>
+</div>
+<div="a20">
+<input type="radio" name="b4" value="England" id="option-20">D.England
+<span id="result-20"></span>
+</div><br>
+<button type="button" onclick="displayAnswer5()">Submit</button>
+<a id="showAnswer5"></a>
+</div>
+</div>
+<script>
+function displayAnswer5() 
+{
+if (document.getElementById("option-17").checked) 
+{
+document.getElementById("result-17").innerHTML = 'Incorrect!';
+showCorrectAnswer5();
+}
+if (document.getElementById("option-18").checked)
+{
+document.getElementById("result-18").innerHTML = 'Incorrect!';
+showCorrectAnswer5();
+}
+if (document.getElementById("option-19").checked)
+{
+document.getElementById("result-19").innerHTML = 'Correct!';
+showCorrectAnswer5();
+}
+if (document.getElementById("option-20").checked)
+{
+document.getElementById("result-20").innerHTML = 'Incorrect!';
+showCorrectAnswer5();
+}
+}
+function showCorrectAnswer5() 
+{
+let answer5 = document.createElement("x");
+answer5.innerHTML = 'Correct Answer C';
+document.getElementById("showAnswer5").appendChild(answer5);
+}
+</script><br><br>
+<div id="q6">
+<b>Question6.BEGK:ADFG::PSVY:?</b>
+<div id="a21">
+<input type="radio" name="b5" value="ROUX" id="option-21">A.ROUX
+<span id="result-21"></span>
+</div>
+<div id="a22">
+<input type="radio" name="b5" value="ORUX" id="option-22">B.ORUX
+<span id="result-22"></span>
+</div>
+<div="a23">
+<input type="radio" name="b5" value="LQUT" id="option-23">C.LQUT
+<span id="result-23"></span>
+</div>
+<div="a24">
+<input type="radio" name="b5" value="LOQT" id="option-24">D.LOQT
+<span id="result-24"></span>
+</div><br>
+<button type="button" onclick="displayAnswer6()">Submit</button>
+<a id="showAnswer6"></a>
+</div>
+</div>
+<script>
+function displayAnswer6() 
+{
+if (document.getElementById("option-21").checked) 
+{
+document.getElementById("result-21").innerHTML = 'Incorrect!';
+showCorrectAnswer6();
+}
+if (document.getElementById("option-22").checked)
+{
+document.getElementById("result-22").innerHTML = 'Correct!';
+showCorrectAnswer6();
+}
+if (document.getElementById("option-23").checked)
+{
+document.getElementById("result-23").innerHTML = 'Incorrect!';
+showCorrectAnswer6();
+}
+if (document.getElementById("option-24").checked)
+{
+document.getElementById("result-24").innerHTML = 'Incorrect!';
+showCorrectAnswer6();
+}
+}
+function showCorrectAnswer6() 
+{
+let answer6 = document.createElement("x");
+answer6.innerHTML = 'Correct Answer B';
+document.getElementById("showAnswer6").appendChild(answer6);
+}
+</script><br><br>
+<div id="q7">
+<b>Question7.AZBY:CXDW::EVFU:?</b>
+<div id="a25">
+<input type="radio" name="b6" value="GTHS" id="option-25">A.GTHS
+<span id="result-25"></span>
+</div>
+<div id="a26">
+<input type="radio" name="b6" value="GHTS" id="option-26">B.GHTS
+<span id="result-26"></span>
+</div>
+<div="a27">
+<input type="radio" name="b6" value="GSTH" id="option-27">C.GSTH
+<span id="result-27"></span>
+</div>
+<div="a28">
+<input type="radio" name="b6" value="TGSH" id="option-28">D.TGSH
+<span id="result-28"></span>
+</div><br>
+<button type="button" onclick="displayAnswer7()">Submit</button>
+<a id="showAnswer7"></a>
+</div>
+</div>
+<script>
+function displayAnswer7() 
+{
+if (document.getElementById("option-25").checked) 
+{
+document.getElementById("result-25").innerHTML = 'Correct!';
+showCorrectAnswer7();
+}
+if (document.getElementById("option-26").checked)
+{
+document.getElementById("result-26").innerHTML = 'Incorrect!';
+showCorrectAnswer7();
+}
+if (document.getElementById("option-27").checked)
+{
+document.getElementById("result-27").innerHTML = 'Incorrect!';
+showCorrectAnswer7();
+}
+if (document.getElementById("option-28").checked)
+{
+document.getElementById("result-28").innerHTML = 'Incorrect!';
+showCorrectAnswer7();
+}
+}
+function showCorrectAnswer7() 
+{
+let answer7 = document.createElement("x");
+answer7.innerHTML = 'Correct Answer A';
+document.getElementById("showAnswer7").appendChild(answer7);
+}
+</script><br><br>
+<div id="q8">
+<b>Question8.MO:13 11::HJ:?</b>
+<div id="a29">
+<input type="radio" name="b7" value="19 17" id="option-29">A.19 17
+<span id="result-29"></span>
+</div>
+<div id="a30">
+<input type="radio" name="b7" value="18 16" id="option-30">B.18 16
+<span id="result-30"></span>
+</div>
+<div="a31">
+<input type="radio" name="b7" value="8 10" id="option-31">C.8 10
+<span id="result-31"></span>
+</div>
+<div="a32">
+<input type="radio" name="b7" value="16 18" id="option-32">D.16 18
+<span id="result-32"></span>
+</div><br>
+<button type="button" onclick="displayAnswer8()">Submit</button>
+<a id="showAnswer8"></a>
+</div>
+</div>
+<script>
+function displayAnswer8() 
+{
+if (document.getElementById("option-29").checked) 
+{
+document.getElementById("result-29").innerHTML = 'Incorrect!';
+showCorrectAnswer8();
+}
+if (document.getElementById("option-30").checked)
+{
+document.getElementById("result-30").innerHTML = 'Correct!';
+showCorrectAnswer8();
+}
+if (document.getElementById("option-31").checked)
+{
+document.getElementById("result-31").innerHTML = 'Incorrect!';
+showCorrectAnswer8();
+}
+if (document.getElementById("option-32").checked)
+{
+document.getElementById("result-32").innerHTML = 'Incorrect!';
+showCorrectAnswer8();
+}
+}
+function showCorrectAnswer8() 
+{
+let answer8 = document.createElement("x");
+answer8.innerHTML = 'Correct Answer B';
+document.getElementById("showAnswer8").appendChild(answer8);
+}
+</script><br><br>
+<div id="q9">
+<b>Question9.Lawyer:Court</b>
+<div id="a33">
+<input type="radio" name="b8" value="Chemist:Laboratory" id="option-33">A.Chemist:Laboratory
+<span id="result-33"></span>
+</div>
+<div id="a34">
+<input type="radio" name="b8" value="Businessman:Office" id="option-34">B.Businessman:Office
+<span id="result-34"></span>
+</div>
+<div="a35">
+<input type="radio" name="b8" value="Labour:Factory" id="option-35">C.Labour:Factory
+<span id="result-35"></span>
+</div>
+<div="a36">
+<input type="radio" name="b8" value="Athelete:Olympics" id="option-36">D.Athelete:Olympics
+<span id="result-36"></span>
+</div><br>
+<button type="button" onclick="displayAnswer9()">Submit</button>
+<a id="showAnswer9"></a>
+</div>
+</div>
+<script>
+function displayAnswer9() 
+{
+if (document.getElementById("option-33").checked) 
+{
+document.getElementById("result-33").innerHTML = 'Correct!';
+showCorrectAnswer9();
+}
+if (document.getElementById("option-34").checked)
+{
+document.getElementById("result-34").innerHTML = 'Incorrect!';
+showCorrectAnswer9();
+}
+if (document.getElementById("option-35").checked)
+{
+document.getElementById("result-35").innerHTML = 'Incorrect!';
+showCorrectAnswer9();
+}
+if (document.getElementById("option-36").checked)
+{
+document.getElementById("result-36").innerHTML = 'Incorrect!';
+showCorrectAnswer9();
+}
+}
+function showCorrectAnswer9() 
+{
+let answer9 = document.createElement("x");
+answer9.innerHTML = 'Correct Answer A';
+document.getElementById("showAnswer9").appendChild(answer9);
+}
+</script><br><br>
+<div id="q10">
+<b>Question10.Silence:Noise</b>
+<div id="a37">
+<input type="radio" name="b9" value="Quiet:Peace" id="option-37">A.Quiet:Peace
+<span id="result-37"></span>
+</div>
+<div id="a38">
+<input type="radio" name="b9" value="Baldness:Hair" id="option-38">B.Baldness:Hair
+<span id="result-38"></span>
+</div>
+<div="a39">
+<input type="radio" name="b9" value="Talk:Whisper" id="option-39">C.Talk:Whisper
+<span id="result-39"></span>
+</div>
+<div="a40">
+<input type="radio" name="b9" value="Sing:Dance" id="option-40">D.Sing:Dance
+<span id="result-40"></span>
+</div><br>
+<button type="button" onclick="displayAnswer10()">Submit</button>
+<a id="showAnswer10"></a>
+</div>
+</div>
+<script>
+function displayAnswer10() 
+{
+if (document.getElementById("option-37").checked) 
+{
+document.getElementById("result-37").innerHTML = 'Incorrect!';
+showCorrectAnswer10();
+}
+if (document.getElementById("option-38").checked)
+{
+document.getElementById("result-38").innerHTML = 'Correct!';
+showCorrectAnswer10();
+}
+if (document.getElementById("option-39").checked)
+{
+document.getElementById("result-39").innerHTML = 'Incorrect!';
+showCorrectAnswer10();
+}
+if (document.getElementById("option-40").checked)
+{
+document.getElementById("result-40").innerHTML = 'Incorrect!';
+showCorrectAnswer10();
+}
+}
+function showCorrectAnswer10() 
+{
+let answer10 = document.createElement("x");
+answer10.innerHTML = 'Correct Answer B';
+document.getElementById("showAnswer10").appendChild(answer10);
+}
+</script><br><br>
+<script>
+var answers = ["Beak","Pool","Horse","Archaeology","Russia","ORUX","GTHS","18 16","Chemist:Laboratory","Baldness:Hair"], 
+    total = answers.length;
+
+function getCheckedValue( radioName ){
+    var radios = document.getElementsByName( radioName ); 
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value; 
+}
+
+function getScore(){
+  var score = 0;
+  for (var i=0; i<total; i++)
+    if(getCheckedValue("b"+i)==answers[i]) score += 1;
+  return score;
+}
+
+function returnScore(){
+alert("Your score is "+ getScore() +"/"+ total +".");
+if (getScore()<=3)
+{
+alert("You have failed in the test.");
+}
+else
+{
+alert("You have passed in the test.");
+}
+}
+</script>
+<center><button type="Button" onclick="returnScore()">Finish</button></center>
+<hr>
+<div> 
+<center>Time Left :: 
+<input id="minutes" type="text" style="border:none;width:22px;font-size:16px;"><font>: 
+                        </font> 
+<input id="seconds" type="text" style="border:none;width:22px;font-size:16px;"></center> 
+</div> 
+</body>
+</html>
